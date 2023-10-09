@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Input Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Input Form</h1>
+    <form method="post">
+        {%csrf_token%}
+        <label for="radius_mean">Radius Mean:</label>
+        <input type="number" name="radius_mean" step="0.001" required><br>
+
+        <label for="texture_mean">Texture Mean:</label>
+        <input type="number" name="texture_mean" step="0.001" required><br>
+
+        <label for="perimeter_mean">Perimeter Mean:</label>
+        <input type="number" name="perimeter_mean" step="0.001" required><br>
+
+        <!-- Include similar input fields for the other variables -->
+        <label for="area_mean">Smoothness Mean:</label>
+        <input type="number" name="area_mean" step="0.001" required><br>
+
+        <label for="smoothness_mean">Smoothness Mean:</label>
+        <input type="number" name="smoothness_mean" step="0.001" required><br>
+
+        <label for="compactness_mean">Compactness Mean:</label>
+        <input type="number" name="compactness_mean" step="0.001" required><br>
+
+        <label for="concavity_mean">Concavity Mean:</label>
+        <input type="number" name="concavity_mean" step="0.001" required><br>
+
+        <label for="concave_points_mean">Concave Points Mean:</label>
+        <input type="number" name="concave_points_mean" step="0.001" required><br>
+
+        <label for="symmetry_mean">Symmetry Mean:</label>
+        <input type="number" name="symmetry_mean" step="0.001" required><br>
+
+        <label for="fractal_dimension_mean">Fractal Dimension Mean:</label>
+        <input type="number" name="fractal_dimension_mean" step="0.001" required><br>
+
+        <label for="radius_se">Radius SE:</label>
+        <input type="number" name="radius_se" step="0.001" required><br>
+
+        <label for="texture_se">Texture SE:</label>
+        <input type="number" name="texture_se" step="0.001" required><br>
+
+        <label for="perimeter_se">Perimeter SE:</label>
+        <input type="number" name="perimeter_se" step="0.001" required><br>
+
+        <label for="area_se">Area SE:</label>
+        <input type="number" name="area_se" step="0.001" required><br>
+
+        <label for="smoothness_se">Smoothness SE:</label>
+        <input type="number" name="smoothness_se" step="0.001" required><br>
+
+        <label for="compactness_se">Compactness SE:</label>
+        <input type="number" name="compactness_se" step="0.001" required><br>
+
+        <label for="concavity_se">Concavity SE:</label>
+        <input type="number" name="concavity_se" step="0.001" required><br>
+
+        <label for="concave_points_se">Concave Points SE:</label>
+        <input type="number" name="concave_points_se" step="0.001" required><br>
+
+        <label for="symmetry_se">Symmetry SE:</label>
+        <input type="number" name="symmetry_se" step="0.001" required><br>
+
+        <label for="fractal_dimension_se">Fractal Dimension SE:</label>
+        <input type="number" name="fractal_dimension_se" step="0.001" required><br>
+
+        <label for="radius_worst">Radius Worst:</label>
+        <input type="number" name="radius_worst" step="0.001" required><br>
+
+        <label for="texture_worst">Texture Worst:</label>
+        <input type="number" name="texture_worst" step="0.001" required><br>
+
+        <label for="perimeter_worst">Perimeter Worst:</label>
+        <input type="number" name="perimeter_worst" step="0.001" required><br>
+
+        <label for="area_worst">Area Worst:</label>
+        <input type="number" name="area_worst" step="0.001" required><br>
+
+        <label for="smoothness_worst">Smoothness Worst:</label>
+        <input type="number" name="smoothness_worst" step="0.001" required><br>
+
+        <label for="compactness_worst">Compactness Worst:</label>
+        <input type="number" name="compactness_worst" step="0.001" required><br>
+
+        <label for="concavity_worst">Concavity Worst:</label>
+        <input type="number" name="concavity_worst" step="0.001" required><br>
+
+        <label for="concave_points_worst">Concave Points Worst:</label>
+        <input type="number" name="concave_points_worst" step="0.001" required><br>
+
+        <label for="symmetry_worst">Symmetry Worst:</label>
+        <input type="number" name="symmetry_worst" step="0.001" required><br>
+
+        <label for="fractal_dimension_worst">Fractal Dimension Worst:</label>
+        <input type="number" name="fractal_dimension_worst" step="0.001" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Placeholder for displaying prediction result -->
+    <div class="result">{{ y_pred }}</div>
+</body>
+</html>
+
